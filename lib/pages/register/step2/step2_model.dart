@@ -6,6 +6,11 @@ class Step2Model extends FlutterFlowModel<Step2Widget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
+  bool isDataUploading = false;
+  FFUploadedFile uploadedLocalFile =
+      FFUploadedFile(bytes: Uint8List.fromList([]));
+  String uploadedFileUrl = '';
+
   // State field(s) for TFName widget.
   FocusNode? tFNameFocusNode;
   TextEditingController? tFNameController;
