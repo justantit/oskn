@@ -3,6 +3,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'step1_model.dart';
 export 'step1_model.dart';
 
@@ -69,23 +70,40 @@ class _Step1WidgetState extends State<Step1Widget> {
               ),
               Flexible(
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(
+                      20.0, 0.0, 20.0, 0.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     children: [
-                      Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
-                            0.0, 20.0, 50.0, 0.0),
-                        child: Text(
-                          'I get smarter the more you tell me, so I’m going to ask a few questions to make the best possible recommendations.',
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Readex Pro',
-                                    fontSize: 26.0,
-                                    fontWeight: FontWeight.w300,
-                                  ),
-                        ),
-                      ),
+                      // Padding(
+                      //   padding: const EdgeInsetsDirectional.fromSTEB(
+                      //       0.0, 20.0, 50.0, 0.0),
+                      //   child: Text(
+                      //     'I get smarter the more you tell me, so I’m going to ask a few questions to make the best possible recommendations.',
+                      //     style:
+                      //         FlutterFlowTheme.of(context).bodyMedium.override(
+                      //               fontFamily: 'Readex Pro',
+                      //               fontSize: 26.0,
+                      //               fontWeight: FontWeight.w300,
+                      //             ),
+                      //   ),
+                      // ),
+                      AnimatedTextKit(
+                          animatedTexts: [
+                            TypewriterAnimatedText(
+                              'I get smarter the more you tell me, so I’m going to ask a few questions to make the best possible recommendations.',
+                              textStyle: const TextStyle(
+                                fontFamily: 'Readex Pro',
+                                fontSize: 26.0,
+                                fontWeight: FontWeight.w300,
+                              ),
+                              speed: const Duration(milliseconds: 100),
+                            ),
+                          ],
+                          totalRepeatCount: 1,
+                          pause: const Duration(milliseconds: 100),
+                          displayFullTextOnTap: true,
+                          stopPauseOnTap: true)
                     ],
                   ),
                 ),
@@ -93,7 +111,8 @@ class _Step1WidgetState extends State<Step1Widget> {
               Align(
                 alignment: const AlignmentDirectional(1.0, 0.0),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 50.0, 30.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(
+                      0.0, 0.0, 50.0, 30.0),
                   child: FFButtonWidget(
                     onPressed: () async {
                       context.pushNamed('Step2');
@@ -101,10 +120,10 @@ class _Step1WidgetState extends State<Step1Widget> {
                     text: 'OK',
                     options: FFButtonOptions(
                       height: 40.0,
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                      iconPadding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      padding: const EdgeInsetsDirectional.fromSTEB(
+                          24.0, 0.0, 24.0, 0.0),
+                      iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                          0.0, 0.0, 0.0, 0.0),
                       color: FlutterFlowTheme.of(context).secondaryBackground,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
