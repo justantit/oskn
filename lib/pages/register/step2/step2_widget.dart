@@ -118,10 +118,8 @@ class _Step2WidgetState extends State<Step2Widget> {
                         hoverColor: Colors.transparent,
                         highlightColor: Colors.transparent,
                         onTap: () async {
-                          final selectedMedia =
-                              await selectMediaWithSourceBottomSheet(
-                            context: context,
-                            allowPhoto: true,
+                          final selectedMedia = await selectMedia(
+                            multiImage: false,
                           );
                           if (selectedMedia != null &&
                               selectedMedia.every((m) =>
