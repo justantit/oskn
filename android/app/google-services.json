@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "1041252101338",
+    "project_id": "oesnktest",
+    "storage_bucket": "oesnktest.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1041252101338:android:654fd8deb705ef65b449e3",
+        "android_client_info": {
+          "package_name": "com.flutterflow.fluttermet"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7LSRx27-Ny3zklwirX9t7njRsa_NU2m0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1041252101338:android:bb8ba4dda4dbfd6db449e3",
+        "android_client_info": {
+          "package_name": "com.flutterflow.healthai"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7LSRx27-Ny3zklwirX9t7njRsa_NU2m0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1041252101338:android:4e7c1be3a9a65392b449e3",
+        "android_client_info": {
+          "package_name": "com.mycompany.oeskn"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7LSRx27-Ny3zklwirX9t7njRsa_NU2m0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
