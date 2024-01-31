@@ -262,23 +262,44 @@ class _Step2WidgetState extends State<Step2Widget> {
                             0.0, 10.0, 0.0, 20.0),
                         child: FFButtonWidget(
                           onPressed: () async {
-                            context.pushNamed(
-                              'Step3',
-                              queryParameters: {
-                                'name': serializeParam(
-                                  _model.tFNameController.text,
-                                  ParamType.String,
-                                ),
-                                'email': serializeParam(
-                                  _model.tFEmailController.text,
-                                  ParamType.String,
-                                ),
-                                'password': serializeParam(
-                                  _model.tFPasswordController.text,
-                                  ParamType.String,
-                                ),
-                              }.withoutNulls,
-                            );
+                            if ((_model.tFEmailController.text != '') &&
+                                (_model.tFNameController.text != '') &&
+                                (_model.tFPasswordController.text != '')) {
+                              context.pushNamed(
+                                'Step3',
+                                queryParameters: {
+                                  'name': serializeParam(
+                                    _model.tFNameController.text,
+                                    ParamType.String,
+                                  ),
+                                  'email': serializeParam(
+                                    _model.tFEmailController.text,
+                                    ParamType.String,
+                                  ),
+                                  'password': serializeParam(
+                                    _model.tFPasswordController.text,
+                                    ParamType.String,
+                                  ),
+                                }.withoutNulls,
+                              );
+                            } else {
+                              await showDialog(
+                                context: context,
+                                builder: (alertDialogContext) {
+                                  return AlertDialog(
+                                    title: const Text('Error'),
+                                    content: const Text('tesdjdijfijdifjdf'),
+                                    actions: [
+                                      TextButton(
+                                        onPressed: () =>
+                                            Navigator.pop(alertDialogContext),
+                                        child: const Text('Ok'),
+                                      ),
+                                    ],
+                                  );
+                                },
+                              );
+                            }
                           },
                           text: 'Next',
                           options: FFButtonOptions(
