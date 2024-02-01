@@ -33,12 +33,47 @@ class _GoogleplacesautocompleteState extends State<Googleplacesautocomplete> {
     return Container(
       child: GooglePlacesAutoCompleteTextFormField(
         textEditingController: controller,
-        googleAPIKey:
-            "AIzaSyBFeB_L5Ak7z-K33rBd44zLiBcp166XhEU", // Replace with your actual API key
-        debounceTime: 400, // defaults to 600 ms,
-        countries: [
-          "cr"
-        ], // optional, by default the list is empty (no restrictions)
+        googleAPIKey: "AIzaSyBFeB_L5Ak7z-K33rBd44zLiBcp166XhEU",
+        decoration: InputDecoration(
+          labelStyle: FlutterFlowTheme.of(context).labelMedium.override(
+                fontFamily: 'Readex Pro',
+                color: FlutterFlowTheme.of(context).primaryText,
+                fontWeight: FontWeight.w300,
+              ),
+          hintText: 'Your name',
+          hintStyle: FlutterFlowTheme.of(context).labelMedium,
+          enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(
+              color: FlutterFlowTheme.of(context).tertiary,
+              width: 2.0,
+            ),
+            borderRadius: BorderRadius.circular(8.0),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(
+              color: FlutterFlowTheme.of(context).primary,
+              width: 2.0,
+            ),
+            borderRadius: BorderRadius.circular(8.0),
+          ),
+          errorBorder: OutlineInputBorder(
+            borderSide: BorderSide(
+              color: FlutterFlowTheme.of(context).error,
+              width: 2.0,
+            ),
+            borderRadius: BorderRadius.circular(8.0),
+          ),
+          focusedErrorBorder: OutlineInputBorder(
+            borderSide: BorderSide(
+              color: FlutterFlowTheme.of(context).error,
+              width: 2.0,
+            ),
+            borderRadius: BorderRadius.circular(8.0),
+          ),
+        ),
+        style: FlutterFlowTheme.of(context).bodyMedium,
+        debounceTime: 400,
+        countries: ["cr"],
         getPlaceDetailWithLatLng: (prediction) {
           // this method will return latlng with place detail
           print("placeDetails " + prediction.lng.toString());
