@@ -26,13 +26,11 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   auto_size_text: 3.0.0
-  better_open_file: ^3.6.5
   cached_network_image: 3.2.1
-  camerawesome: ^2.0.0+1
   cloud_firestore: 4.13.1
   cloud_firestore_platform_interface: 6.0.5
   cloud_firestore_web: 3.8.5
-  collection: 1.18.0
+  collection: 1.17.2
   file_picker: 6.1.1
   firebase_auth: 4.15.2
   firebase_auth_platform_interface: 7.0.8
@@ -67,10 +65,10 @@ dependencies:
   json_path: 0.6.2
   mime_type: 1.0.0
   page_transition: 2.1.0
-  path_provider: ^2.1.1
-  path_provider_android: ^2.1.0
-  path_provider_foundation: ^2.3.0
-  path_provider_platform_interface: ^2.1.0
+  path_provider: 2.0.14
+  path_provider_android: 2.0.25
+  path_provider_foundation: 2.2.2
+  path_provider_platform_interface: 2.0.6
   plugin_platform_interface: 2.1.6
   provider: 6.0.5
   rxdart: 0.27.7
