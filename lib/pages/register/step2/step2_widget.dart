@@ -106,72 +106,79 @@ class _Step2WidgetState extends State<Step2Widget> {
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [
-                    Container(
-                      width: 100.0,
-                      height: 100.0,
-                      decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).secondaryBackground,
-                      ),
-                      child: InkWell(
-                        splashColor: Colors.transparent,
-                        focusColor: Colors.transparent,
-                        hoverColor: Colors.transparent,
-                        highlightColor: Colors.transparent,
-                        onTap: () async {
-                          final selectedMedia = await selectMedia(
-                            multiImage: false,
-                          );
-                          if (selectedMedia != null &&
-                              selectedMedia.every((m) =>
-                                  validateFileFormat(m.storagePath, context))) {
-                            setState(() => _model.isDataUploading = true);
-                            var selectedUploadedFiles = <FFUploadedFile>[];
+                    Padding(
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 30.0),
+                      child: Container(
+                        width: 100.0,
+                        height: 100.0,
+                        decoration: BoxDecoration(
+                          color:
+                              FlutterFlowTheme.of(context).secondaryBackground,
+                        ),
+                        child: InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onTap: () async {
+                            final selectedMedia =
+                                await selectMediaWithSourceBottomSheet(
+                              context: context,
+                              allowPhoto: true,
+                            );
+                            if (selectedMedia != null &&
+                                selectedMedia.every((m) => validateFileFormat(
+                                    m.storagePath, context))) {
+                              setState(() => _model.isDataUploading = true);
+                              var selectedUploadedFiles = <FFUploadedFile>[];
 
-                            var downloadUrls = <String>[];
-                            try {
-                              selectedUploadedFiles = selectedMedia
-                                  .map((m) => FFUploadedFile(
-                                        name: m.storagePath.split('/').last,
-                                        bytes: m.bytes,
-                                        height: m.dimensions?.height,
-                                        width: m.dimensions?.width,
-                                        blurHash: m.blurHash,
-                                      ))
-                                  .toList();
+                              var downloadUrls = <String>[];
+                              try {
+                                selectedUploadedFiles = selectedMedia
+                                    .map((m) => FFUploadedFile(
+                                          name: m.storagePath.split('/').last,
+                                          bytes: m.bytes,
+                                          height: m.dimensions?.height,
+                                          width: m.dimensions?.width,
+                                          blurHash: m.blurHash,
+                                        ))
+                                    .toList();
 
-                              downloadUrls = (await Future.wait(
-                                selectedMedia.map(
-                                  (m) async =>
-                                      await uploadData(m.storagePath, m.bytes),
-                                ),
-                              ))
-                                  .where((u) => u != null)
-                                  .map((u) => u!)
-                                  .toList();
-                            } finally {
-                              _model.isDataUploading = false;
+                                downloadUrls = (await Future.wait(
+                                  selectedMedia.map(
+                                    (m) async => await uploadData(
+                                        m.storagePath, m.bytes),
+                                  ),
+                                ))
+                                    .where((u) => u != null)
+                                    .map((u) => u!)
+                                    .toList();
+                              } finally {
+                                _model.isDataUploading = false;
+                              }
+                              if (selectedUploadedFiles.length ==
+                                      selectedMedia.length &&
+                                  downloadUrls.length == selectedMedia.length) {
+                                setState(() {
+                                  _model.uploadedLocalFile =
+                                      selectedUploadedFiles.first;
+                                  _model.uploadedFileUrl = downloadUrls.first;
+                                });
+                              } else {
+                                setState(() {});
+                                return;
+                              }
                             }
-                            if (selectedUploadedFiles.length ==
-                                    selectedMedia.length &&
-                                downloadUrls.length == selectedMedia.length) {
-                              setState(() {
-                                _model.uploadedLocalFile =
-                                    selectedUploadedFiles.first;
-                                _model.uploadedFileUrl = downloadUrls.first;
-                              });
-                            } else {
-                              setState(() {});
-                              return;
-                            }
-                          }
-                        },
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(8.0),
-                          child: Image.network(
-                            _model.uploadedFileUrl,
-                            width: 300.0,
-                            height: 200.0,
-                            fit: BoxFit.cover,
+                          },
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(8.0),
+                            child: Image.network(
+                              _model.uploadedFileUrl,
+                              width: 300.0,
+                              height: 200.0,
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         ),
                       ),
