@@ -28,13 +28,6 @@ class CameraAwesomeApp extends StatefulWidget {
 class _CameraAwesomeAppState extends State<CameraAwesomeApp> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: CameraAwesomeBuilder.awesome(
-        saveConfig: SaveConfig.photoAndVideo(),
-        onMediaTap: (mediaCapture) {
-          // OpenFile.open(mediaCapture.filePath || "");
-        },
-      ),
-    );
+    return Container();
   }
 }
