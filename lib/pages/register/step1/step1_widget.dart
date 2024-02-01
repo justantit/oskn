@@ -2,6 +2,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/custom_code/widgets/index.dart' as custom_widgets;
+import '/flutter_flow/random_data_util.dart' as random_data;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'step1_model.dart';
@@ -93,6 +94,12 @@ class _Step1WidgetState extends State<Step1Widget> {
                         child: custom_widgets.Carouselslider(
                           width: MediaQuery.sizeOf(context).width * 1.0,
                           height: MediaQuery.sizeOf(context).height * 0.15,
+                          images: List.generate(
+                              random_data.randomInteger(1, 10),
+                              (index) => random_data.randomImageUrl(
+                                    100,
+                                    100,
+                                  )),
                         ),
                       ),
                     ],
