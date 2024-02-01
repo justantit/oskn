@@ -26,7 +26,8 @@ class CameraAwesomeApp extends StatefulWidget {
 class _CameraAwesomeAppState extends State<CameraAwesomeApp> {
   @override
   Widget build(BuildContext context) {
-    return Container(CameraAwesomeBuilder.awesome(
+    return Container(
+        child: CameraAwesomeBuilder.awesome(
       saveConfig: SaveConfig.photo(),
       onImageForAnalysis: analyzeImage,
       imageAnalysisConfig: AnalysisConfig(
