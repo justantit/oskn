@@ -14,7 +14,7 @@ class AnimationText extends StatefulWidget {
     super.key,
     this.width,
     this.height,
-    this.text,
+    required this.text,
   });
 
   final double? width;
