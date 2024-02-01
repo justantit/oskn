@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 
 import 'package:camerawesome/camerawesome_plugin.dart';
 import 'package:camerawesome/pigeon.dart';
-import 'package:open_file/open_file.dart'; // Import the open_file package
+import 'package:better_open_file/better_open_file.dart';
 
 class CameraAwesomeApp extends StatefulWidget {
   const CameraAwesomeApp({

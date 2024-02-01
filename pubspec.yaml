@@ -26,6 +26,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   auto_size_text: 3.0.0
+  better_open_file: ^3.6.5
   cached_network_image: 3.2.1
   camerawesome: ^2.0.0+1
   cloud_firestore: 4.13.1
@@ -65,7 +66,6 @@ dependencies:
   intl: 0.18.1
   json_path: 0.6.2
   mime_type: 1.0.0
-  open_file: ^3.3.2
   page_transition: 2.1.0
   path_provider: ^2.1.1
   path_provider_android: ^2.1.0
