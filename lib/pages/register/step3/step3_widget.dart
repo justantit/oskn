@@ -3,6 +3,8 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'step3_model.dart';
 export 'step3_model.dart';
 
@@ -77,13 +79,13 @@ class _Step3WidgetState extends State<Step3Widget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 50.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 50.0, 0.0),
                       child: Text(
                         'Nice to meet you,  ${widget.name}. Please tell us what is your main skin goal right now?',
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -98,15 +100,15 @@ class _Step3WidgetState extends State<Step3Widget> {
               ),
               Flexible(
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Align(
-                        alignment: const AlignmentDirectional(1.0, 0.0),
+                        alignment: AlignmentDirectional(1.0, 0.0),
                         child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 5.0, 0.0, 5.0),
                           child: FFButtonWidget(
                             onPressed: () {
@@ -115,9 +117,9 @@ class _Step3WidgetState extends State<Step3Widget> {
                             text: 'Reduce fine lines and wrinkles',
                             options: FFButtonOptions(
                               height: 40.0,
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   24.0, 0.0, 24.0, 0.0),
-                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
                               color: FlutterFlowTheme.of(context)
                                   .secondaryBackground,
@@ -139,9 +141,9 @@ class _Step3WidgetState extends State<Step3Widget> {
                         ),
                       ),
                       Align(
-                        alignment: const AlignmentDirectional(1.0, 0.0),
+                        alignment: AlignmentDirectional(1.0, 0.0),
                         child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 5.0, 0.0, 5.0),
                           child: FFButtonWidget(
                             onPressed: () {
@@ -150,9 +152,9 @@ class _Step3WidgetState extends State<Step3Widget> {
                             text: 'Even out the skin tone',
                             options: FFButtonOptions(
                               height: 40.0,
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   24.0, 0.0, 24.0, 0.0),
-                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
                               color: FlutterFlowTheme.of(context)
                                   .secondaryBackground,
@@ -174,9 +176,9 @@ class _Step3WidgetState extends State<Step3Widget> {
                         ),
                       ),
                       Align(
-                        alignment: const AlignmentDirectional(1.0, 0.0),
+                        alignment: AlignmentDirectional(1.0, 0.0),
                         child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 5.0, 0.0, 5.0),
                           child: FFButtonWidget(
                             onPressed: () {
@@ -185,9 +187,9 @@ class _Step3WidgetState extends State<Step3Widget> {
                             text: 'Improve hydration levels',
                             options: FFButtonOptions(
                               height: 40.0,
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   24.0, 0.0, 24.0, 0.0),
-                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
                               color: FlutterFlowTheme.of(context)
                                   .secondaryBackground,
@@ -209,9 +211,9 @@ class _Step3WidgetState extends State<Step3Widget> {
                         ),
                       ),
                       Align(
-                        alignment: const AlignmentDirectional(1.0, 0.0),
+                        alignment: AlignmentDirectional(1.0, 0.0),
                         child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 5.0, 0.0, 5.0),
                           child: FFButtonWidget(
                             onPressed: () {
@@ -220,9 +222,9 @@ class _Step3WidgetState extends State<Step3Widget> {
                             text: 'Reduce appearance of acne',
                             options: FFButtonOptions(
                               height: 40.0,
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   24.0, 0.0, 24.0, 0.0),
-                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
                               color: FlutterFlowTheme.of(context)
                                   .secondaryBackground,
@@ -244,9 +246,9 @@ class _Step3WidgetState extends State<Step3Widget> {
                         ),
                       ),
                       Align(
-                        alignment: const AlignmentDirectional(1.0, 0.0),
+                        alignment: AlignmentDirectional(1.0, 0.0),
                         child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 5.0, 0.0, 5.0),
                           child: FFButtonWidget(
                             onPressed: () {
@@ -255,9 +257,9 @@ class _Step3WidgetState extends State<Step3Widget> {
                             text: 'Reduce appearance of blemishes',
                             options: FFButtonOptions(
                               height: 40.0,
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   24.0, 0.0, 24.0, 0.0),
-                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
                               color: FlutterFlowTheme.of(context)
                                   .secondaryBackground,
@@ -279,9 +281,9 @@ class _Step3WidgetState extends State<Step3Widget> {
                         ),
                       ),
                       Align(
-                        alignment: const AlignmentDirectional(1.0, 0.0),
+                        alignment: AlignmentDirectional(1.0, 0.0),
                         child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 5.0, 0.0, 5.0),
                           child: FFButtonWidget(
                             onPressed: () {
@@ -290,9 +292,9 @@ class _Step3WidgetState extends State<Step3Widget> {
                             text: 'Reduce oiliness in my skin',
                             options: FFButtonOptions(
                               height: 40.0,
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   24.0, 0.0, 24.0, 0.0),
-                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
                               color: FlutterFlowTheme.of(context)
                                   .secondaryBackground,
@@ -314,9 +316,9 @@ class _Step3WidgetState extends State<Step3Widget> {
                         ),
                       ),
                       Align(
-                        alignment: const AlignmentDirectional(1.0, 0.0),
+                        alignment: AlignmentDirectional(1.0, 0.0),
                         child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 5.0, 0.0, 5.0),
                           child: FFButtonWidget(
                             onPressed: () async {
@@ -345,9 +347,9 @@ class _Step3WidgetState extends State<Step3Widget> {
                             text: 'Maintain a healthy skin',
                             options: FFButtonOptions(
                               height: 40.0,
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   24.0, 0.0, 24.0, 0.0),
-                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
                               color: FlutterFlowTheme.of(context)
                                   .secondaryBackground,

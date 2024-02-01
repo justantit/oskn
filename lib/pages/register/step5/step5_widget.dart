@@ -5,6 +5,8 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'step5_model.dart';
 export 'step5_model.dart';
 
@@ -92,13 +94,13 @@ class _Step5WidgetState extends State<Step5Widget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 50.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 50.0, 0.0),
                       child: Text(
                         'We can sure help! Please tell us, have you noticed any particular changes with your acne lately?',
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -113,20 +115,20 @@ class _Step5WidgetState extends State<Step5Widget> {
               ),
               Flexible(
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Flexible(
                         child: Align(
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Flexible(
-                                child: SizedBox(
+                                child: Container(
                                   width: 80.0,
                                   child: TextFormField(
                                     controller: _model.textController1,
@@ -140,7 +142,7 @@ class _Step5WidgetState extends State<Step5Widget> {
                                       hintStyle: FlutterFlowTheme.of(context)
                                           .labelMedium,
                                       enabledBorder: OutlineInputBorder(
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Color(0xFF252525),
                                           width: 2.0,
                                         ),
@@ -175,7 +177,7 @@ class _Step5WidgetState extends State<Step5Widget> {
                                             BorderRadius.circular(10.0),
                                       ),
                                       filled: true,
-                                      fillColor: const Color(0xFFF5F5F5),
+                                      fillColor: Color(0xFFF5F5F5),
                                     ),
                                     style:
                                         FlutterFlowTheme.of(context).bodyMedium,
@@ -187,9 +189,9 @@ class _Step5WidgetState extends State<Step5Widget> {
                               ),
                               Flexible(
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       10.0, 0.0, 10.0, 0.0),
-                                  child: SizedBox(
+                                  child: Container(
                                     width: 80.0,
                                     child: TextFormField(
                                       controller: _model.textController2,
@@ -203,7 +205,7 @@ class _Step5WidgetState extends State<Step5Widget> {
                                         hintStyle: FlutterFlowTheme.of(context)
                                             .labelMedium,
                                         enabledBorder: OutlineInputBorder(
-                                          borderSide: const BorderSide(
+                                          borderSide: BorderSide(
                                             color: Color(0xFF252525),
                                             width: 2.0,
                                           ),
@@ -238,7 +240,7 @@ class _Step5WidgetState extends State<Step5Widget> {
                                               BorderRadius.circular(10.0),
                                         ),
                                         filled: true,
-                                        fillColor: const Color(0xFFF5F5F5),
+                                        fillColor: Color(0xFFF5F5F5),
                                       ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium,
@@ -250,7 +252,7 @@ class _Step5WidgetState extends State<Step5Widget> {
                                 ),
                               ),
                               Flexible(
-                                child: SizedBox(
+                                child: Container(
                                   width: 80.0,
                                   child: TextFormField(
                                     controller: _model.textController3,
@@ -264,7 +266,7 @@ class _Step5WidgetState extends State<Step5Widget> {
                                       hintStyle: FlutterFlowTheme.of(context)
                                           .labelMedium,
                                       enabledBorder: OutlineInputBorder(
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Color(0xFF252525),
                                           width: 2.0,
                                         ),
@@ -299,7 +301,7 @@ class _Step5WidgetState extends State<Step5Widget> {
                                             BorderRadius.circular(10.0),
                                       ),
                                       filled: true,
-                                      fillColor: const Color(0xFFF5F5F5),
+                                      fillColor: Color(0xFFF5F5F5),
                                     ),
                                     style:
                                         FlutterFlowTheme.of(context).bodyMedium,
@@ -318,15 +320,15 @@ class _Step5WidgetState extends State<Step5Widget> {
                 ),
               ),
               Align(
-                alignment: const AlignmentDirectional(1.0, 0.0),
+                alignment: AlignmentDirectional(1.0, 0.0),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 20.0, 5.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 20.0, 5.0),
                   child: FFButtonWidget(
                     onPressed: () async {
                       GoRouter.of(context).prepareAuthEvent();
                       if (widget.password! != widget.password!) {
                         ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
+                          SnackBar(
                             content: Text(
                               'Passwords don\'t match!',
                             ),
@@ -361,9 +363,9 @@ class _Step5WidgetState extends State<Step5Widget> {
                     options: FFButtonOptions(
                       height: 40.0,
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                       iconPadding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: FlutterFlowTheme.of(context).secondaryBackground,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(

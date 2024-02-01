@@ -5,6 +5,8 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/upload_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'step2_model.dart';
 export 'step2_model.dart';
 
@@ -80,12 +82,12 @@ class _Step2WidgetState extends State<Step2Widget> {
               ),
               Flexible(
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             0.0, 20.0, 50.0, 0.0),
                         child: Text(
                           'First things first, what is your name?',
@@ -102,13 +104,13 @@ class _Step2WidgetState extends State<Step2Widget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 30.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 30.0),
                       child: Container(
                         width: 100.0,
                         height: 100.0,
@@ -193,7 +195,7 @@ class _Step2WidgetState extends State<Step2Widget> {
                         hintText: 'Your name',
                         hintStyle: FlutterFlowTheme.of(context).labelMedium,
                         enabledBorder: OutlineInputBorder(
-                          borderSide: const BorderSide(
+                          borderSide: BorderSide(
                             color: Color(0xFF252525),
                             width: 2.0,
                           ),
@@ -221,7 +223,7 @@ class _Step2WidgetState extends State<Step2Widget> {
                           borderRadius: BorderRadius.circular(10.0),
                         ),
                         filled: true,
-                        fillColor: const Color(0xFFF5F5F5),
+                        fillColor: Color(0xFFF5F5F5),
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium,
                       validator:
@@ -229,7 +231,7 @@ class _Step2WidgetState extends State<Step2Widget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                       child: TextFormField(
                         controller: _model.tFEmailController,
                         focusNode: _model.tFEmailFocusNode,
@@ -239,7 +241,7 @@ class _Step2WidgetState extends State<Step2Widget> {
                           hintText: 'Email',
                           hintStyle: FlutterFlowTheme.of(context).labelMedium,
                           enabledBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
+                            borderSide: BorderSide(
                               color: Color(0xFF252525),
                               width: 2.0,
                             ),
@@ -267,7 +269,7 @@ class _Step2WidgetState extends State<Step2Widget> {
                             borderRadius: BorderRadius.circular(10.0),
                           ),
                           filled: true,
-                          fillColor: const Color(0xFFF5F5F5),
+                          fillColor: Color(0xFFF5F5F5),
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium,
                         validator: _model.tFEmailControllerValidator
@@ -276,7 +278,7 @@ class _Step2WidgetState extends State<Step2Widget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                       child: TextFormField(
                         controller: _model.tFPasswordController,
                         focusNode: _model.tFPasswordFocusNode,
@@ -286,7 +288,7 @@ class _Step2WidgetState extends State<Step2Widget> {
                           hintText: 'Password',
                           hintStyle: FlutterFlowTheme.of(context).labelMedium,
                           enabledBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
+                            borderSide: BorderSide(
                               color: Color(0xFF252525),
                               width: 2.0,
                             ),
@@ -314,7 +316,7 @@ class _Step2WidgetState extends State<Step2Widget> {
                             borderRadius: BorderRadius.circular(10.0),
                           ),
                           filled: true,
-                          fillColor: const Color(0xFFF5F5F5),
+                          fillColor: Color(0xFFF5F5F5),
                           suffixIcon: InkWell(
                             onTap: () => setState(
                               () => _model.tFPasswordVisibility =
@@ -335,15 +337,18 @@ class _Step2WidgetState extends State<Step2Widget> {
                       ),
                     ),
                     Align(
-                      alignment: const AlignmentDirectional(1.0, 0.0),
+                      alignment: AlignmentDirectional(1.0, 0.0),
                       child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             0.0, 10.0, 0.0, 20.0),
                         child: FFButtonWidget(
                           onPressed: () async {
-                            if ((_model.tFEmailController.text != '') &&
-                                (_model.tFNameController.text != '') &&
-                                (_model.tFPasswordController.text != '')) {
+                            if ((_model.tFEmailController.text != null &&
+                                    _model.tFEmailController.text != '') &&
+                                (_model.tFNameController.text != null &&
+                                    _model.tFNameController.text != '') &&
+                                (_model.tFPasswordController.text != null &&
+                                    _model.tFPasswordController.text != '')) {
                               context.pushNamed(
                                 'Step3',
                                 queryParameters: {
@@ -366,13 +371,13 @@ class _Step2WidgetState extends State<Step2Widget> {
                                 context: context,
                                 builder: (alertDialogContext) {
                                   return AlertDialog(
-                                    title: const Text('Error'),
-                                    content: const Text('tesdjdijfijdifjdf'),
+                                    title: Text('Error'),
+                                    content: Text('tesdjdijfijdifjdf'),
                                     actions: [
                                       TextButton(
                                         onPressed: () =>
                                             Navigator.pop(alertDialogContext),
-                                        child: const Text('Ok'),
+                                        child: Text('Ok'),
                                       ),
                                     ],
                                   );
@@ -383,9 +388,9 @@ class _Step2WidgetState extends State<Step2Widget> {
                           text: 'Next',
                           options: FFButtonOptions(
                             height: 40.0,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 24.0, 0.0, 24.0, 0.0),
-                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                            iconPadding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context)
                                 .secondaryBackground,
