@@ -27,20 +27,12 @@ class _CameraAwesomeAppState extends State<CameraAwesomeApp> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        child: CameraAwesomeBuilder.awesome(
-      saveConfig: SaveConfig.photo(),
-      onImageForAnalysis: analyzeImage,
-      imageAnalysisConfig: AnalysisConfig(
-        // Android specific options
-        androidOptions: const AndroidAnalysisOptions.nv21(
-          // Target width (CameraX will chose the closest resolution to this width)
-          width: 250,
-        ),
-        // Wether to start automatically the analysis (true by default)
-        autoStart: true,
-        // Max frames per second, null for no limit (default)
-        maxFramesPerSecond: 20,
+      child: CameraAwesomeBuilder.awesome(
+        saveConfig: SaveConfig.photoAndVideo(),
+        onMediaTap: (mediaCapture) {
+          OpenFile.open(mediaCapture.filePath);
+        },
       ),
-    ));
+    );
   }
 }
