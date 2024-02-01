@@ -35,52 +35,6 @@ class _GoogleplacesautocompleteState extends State<Googleplacesautocomplete> {
         textEditingController: controller,
         googleAPIKey:
             "AIzaSyBFeB_L5Ak7z-K33rBd44zLiBcp166XhEU", // Replace with your actual API key
-        decoration: InputDecoration(
-          labelStyle: FlutterFlowTheme.of(context).labelMedium.override(
-                fontFamily: 'Readex Pro',
-                color: FlutterFlowTheme.of(context).secondaryText,
-                fontSize: 16.0,
-                fontWeight: FontWeight.w600,
-              ),
-          hintText: 'Email address',
-          hintStyle: FlutterFlowTheme.of(context).labelLarge,
-          enabledBorder: OutlineInputBorder(
-            borderSide: const BorderSide(
-              color: Color(0xFFB4B4B4),
-              width: 2.0,
-            ),
-            borderRadius: BorderRadius.circular(10.0),
-          ),
-          focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(
-              color: FlutterFlowTheme.of(context).primaryText,
-              width: 2.0,
-            ),
-            borderRadius: BorderRadius.circular(10.0),
-          ),
-          errorBorder: OutlineInputBorder(
-            borderSide: BorderSide(
-              color: FlutterFlowTheme.of(context).error,
-              width: 2.0,
-            ),
-            borderRadius: BorderRadius.circular(10.0),
-          ),
-          focusedErrorBorder: OutlineInputBorder(
-            borderSide: BorderSide(
-              color: FlutterFlowTheme.of(context).error,
-              width: 2.0,
-            ),
-            borderRadius: BorderRadius.circular(10.0),
-          ),
-          filled: true,
-          fillColor: FlutterFlowTheme.of(context).secondaryBackground,
-        ),
-        style: FlutterFlowTheme.of(context).bodyMedium.override(
-              fontFamily: 'Readex Pro',
-              color: FlutterFlowTheme.of(context).primaryText,
-              fontSize: 16.0,
-              fontWeight: FontWeight.w600,
-            ),
         debounceTime: 400, // defaults to 600 ms,
         countries: [
           "cr"
