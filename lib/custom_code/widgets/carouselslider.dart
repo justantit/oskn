@@ -14,12 +14,10 @@ class Carouselslider extends StatefulWidget {
     super.key,
     this.width,
     this.height,
-    this.images,
   });
 
   final double? width;
   final double? height;
-  final List<String> images;
 
   @override
   State<Carouselslider> createState() => _CarouselsliderState();
