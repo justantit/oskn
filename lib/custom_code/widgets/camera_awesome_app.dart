@@ -8,13 +8,14 @@ import 'package:flutter/material.dart';
 // DO NOT REMOVE OR MODIFY THE CODE ABOVE!
 
 import 'package:camerawesome/camerawesome_plugin.dart';
+import 'package:open_file/open_file.dart'; // Import the open_file package
 
 class CameraAwesomeApp extends StatefulWidget {
   const CameraAwesomeApp({
-    super.key,
+    Key? key, // Add the Key parameter here
     this.width,
     this.height,
-  });
+  }) : super(key: key); // Use super to call the constructor of the superclass
 
   final double? width;
   final double? height;
