@@ -1,6 +1,7 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'step1_model.dart';
@@ -84,6 +85,14 @@ class _Step1WidgetState extends State<Step1Widget> {
                                     fontSize: 26.0,
                                     fontWeight: FontWeight.w300,
                                   ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: MediaQuery.sizeOf(context).width * 1.0,
+                        height: MediaQuery.sizeOf(context).height * 0.15,
+                        child: custom_widgets.Carouselslider(
+                          width: MediaQuery.sizeOf(context).width * 1.0,
+                          height: MediaQuery.sizeOf(context).height * 0.15,
                         ),
                       ),
                     ],
