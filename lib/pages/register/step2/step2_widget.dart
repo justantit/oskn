@@ -183,49 +183,57 @@ class _Step2WidgetState extends State<Step2Widget> {
                         ),
                       ),
                     ),
-                    TextFormField(
-                      controller: _model.tFNameController,
-                      focusNode: _model.tFNameFocusNode,
-                      autofocus: true,
-                      obscureText: false,
-                      decoration: InputDecoration(
-                        labelStyle: FlutterFlowTheme.of(context).labelMedium,
-                        hintText: 'Your name',
-                        hintStyle: FlutterFlowTheme.of(context).labelMedium,
-                        enabledBorder: OutlineInputBorder(
-                          borderSide: const BorderSide(
-                            color: Color(0xFF252525),
-                            width: 2.0,
+                    Padding(
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                      child: TextFormField(
+                        controller: _model.tFNameController,
+                        focusNode: _model.tFNameFocusNode,
+                        autofocus: true,
+                        obscureText: false,
+                        decoration: InputDecoration(
+                          labelStyle: FlutterFlowTheme.of(context)
+                              .labelMedium
+                              .override(
+                                fontFamily: 'Readex Pro',
+                                color: FlutterFlowTheme.of(context).primaryText,
+                                fontWeight: FontWeight.w300,
+                              ),
+                          hintText: 'Your name',
+                          hintStyle: FlutterFlowTheme.of(context).labelMedium,
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: FlutterFlowTheme.of(context).tertiary,
+                              width: 2.0,
+                            ),
+                            borderRadius: BorderRadius.circular(8.0),
                           ),
-                          borderRadius: BorderRadius.circular(10.0),
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
-                            color: FlutterFlowTheme.of(context).primaryText,
-                            width: 2.0,
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: FlutterFlowTheme.of(context).primary,
+                              width: 2.0,
+                            ),
+                            borderRadius: BorderRadius.circular(8.0),
                           ),
-                          borderRadius: BorderRadius.circular(10.0),
-                        ),
-                        errorBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
-                            color: FlutterFlowTheme.of(context).error,
-                            width: 2.0,
+                          errorBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: FlutterFlowTheme.of(context).error,
+                              width: 2.0,
+                            ),
+                            borderRadius: BorderRadius.circular(8.0),
                           ),
-                          borderRadius: BorderRadius.circular(10.0),
-                        ),
-                        focusedErrorBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
-                            color: FlutterFlowTheme.of(context).error,
-                            width: 2.0,
+                          focusedErrorBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: FlutterFlowTheme.of(context).error,
+                              width: 2.0,
+                            ),
+                            borderRadius: BorderRadius.circular(8.0),
                           ),
-                          borderRadius: BorderRadius.circular(10.0),
                         ),
-                        filled: true,
-                        fillColor: const Color(0xFFF5F5F5),
+                        style: FlutterFlowTheme.of(context).bodyMedium,
+                        validator: _model.tFNameControllerValidator
+                            .asValidator(context),
                       ),
-                      style: FlutterFlowTheme.of(context).bodyMedium,
-                      validator:
-                          _model.tFNameControllerValidator.asValidator(context),
                     ),
                     Padding(
                       padding:

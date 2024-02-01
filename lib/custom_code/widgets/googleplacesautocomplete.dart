@@ -36,18 +36,16 @@ class _GoogleplacesautocompleteState extends State<Googleplacesautocomplete> {
         googleAPIKey: "AIzaSyBFeB_L5Ak7z-K33rBd44zLiBcp166XhEU",
         debounceTime: 400, // defaults to 600 ms,
         countries: [
-          "de"
+          "cr"
         ], // optional, by default the list is empty (no restrictions)
-        isLatLngRequired:
-            true, // if you require the coordinates from the place details
         getPlaceDetailWithLatLng: (prediction) {
           // this method will return latlng with place detail
           print("placeDetails " + prediction.lng.toString());
         }, // this callback is called when isLatLngRequired is true
         itmClick: (prediction) {
           controller.text = prediction.description.toString();
-          controller.selection =
-              TextSelection.fromPosition(TextPosition(offset: 10));
+          controller.selection = TextSelection.fromPosition(
+              TextPosition(offset: prediction.description.toString().length));
         },
       ),
     );
