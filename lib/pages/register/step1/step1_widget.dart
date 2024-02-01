@@ -79,13 +79,21 @@ class _Step1WidgetState extends State<Step1Widget> {
                     children: [
                       Container(
                         width: MediaQuery.sizeOf(context).width * 1.0,
-                        height: MediaQuery.sizeOf(context).height * 0.4,
+                        height: MediaQuery.sizeOf(context).height * 0.1,
+                        child: custom_widgets.Googleplacesautocomplete(
+                          width: MediaQuery.sizeOf(context).width * 1.0,
+                          height: MediaQuery.sizeOf(context).height * 0.1,
+                        ),
+                      ),
+                      Container(
+                        width: MediaQuery.sizeOf(context).width * 1.0,
+                        height: MediaQuery.sizeOf(context).height * 0.1,
                         child: custom_widgets.AnimationText(
                           width: MediaQuery.sizeOf(context).width * 1.0,
-                          height: MediaQuery.sizeOf(context).height * 0.4,
+                          height: MediaQuery.sizeOf(context).height * 0.1,
                           text: random_data.randomString(
-                            1,
-                            10,
+                            30,
+                            200,
                             true,
                             false,
                             false,
