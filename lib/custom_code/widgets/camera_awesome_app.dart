@@ -32,7 +32,7 @@ class _CameraAwesomeAppState extends State<CameraAwesomeApp> {
       child: CameraAwesomeBuilder.awesome(
         saveConfig: SaveConfig.photoAndVideo(),
         onMediaTap: (mediaCapture) {
-          OpenFile.open(mediaCapture.path);
+          OpenFile.open(mediaCapture.filePath);
         },
       ),
     );
