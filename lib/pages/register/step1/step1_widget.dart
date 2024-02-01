@@ -74,17 +74,13 @@ class _Step1WidgetState extends State<Step1Widget> {
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     children: [
-                      Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
-                            0.0, 20.0, 50.0, 0.0),
-                        child: Text(
-                          'I get smarter the more you tell me, so I’m going to ask a few questions to make the best possible recommendations.',
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Readex Pro',
-                                    fontSize: 26.0,
-                                    fontWeight: FontWeight.w300,
-                                  ),
+                      SizedBox(
+                        width: MediaQuery.sizeOf(context).width * 1.0,
+                        height: MediaQuery.sizeOf(context).height * 0.4,
+                        child: custom_widgets.AnimationText(
+                          width: MediaQuery.sizeOf(context).width * 1.0,
+                          height: MediaQuery.sizeOf(context).height * 0.4,
+                          text: 'Hola esta es una prueba',
                         ),
                       ),
                       SizedBox(
