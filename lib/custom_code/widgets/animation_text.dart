@@ -31,10 +31,7 @@ class _AnimationTextState extends State<AnimationText> {
     return Container(
       child: AnimatedTextKit(
         animatedTexts: [
-          TypewriterAnimatedText('Discipline is the best tool'),
-          TypewriterAnimatedText('Design first, then code'),
-          TypewriterAnimatedText('Do not patch bugs out, rewrite them'),
-          TypewriterAnimatedText('Do not test bugs out, design them out'),
+          TypewriterAnimatedText(widget.text),
         ],
         onTap: () {
           print("Tap Event");

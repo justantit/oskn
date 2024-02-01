@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 // DO NOT REMOVE OR MODIFY THE CODE ABOVE!
 
 import 'package:google_places_autocomplete_text_field/google_places_autocomplete_text_field.dart';
+import 'package:google_places_autocomplete_text_field/model/prediction.dart';
 
 class Googleplacesautocomplete extends StatefulWidget {
   const Googleplacesautocomplete({
@@ -44,9 +45,9 @@ class _GoogleplacesautocompleteState extends State<Googleplacesautocomplete> {
           print("placeDetails " + prediction.lng.toString());
         }, // this callback is called when isLatLngRequired is true
         itmClick: (prediction) {
-          controller.text = prediction.description;
-          controller.selection = TextSelection.fromPosition(
-              TextPosition(offset: prediction.description.length));
+          controller.text = prediction.description.toString();
+          controller.selection =
+              TextSelection.fromPosition(TextPosition(offset: 10));
         },
       ),
     );
