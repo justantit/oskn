@@ -29,21 +29,17 @@ class _AnimationTextState extends State<AnimationText> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        child: AnimatedTextKit(
-      animatedTexts: [
-        TypewriterAnimatedText(
-          'Hello world!',
-          textStyle: const TextStyle(
-            fontSize: 32.0,
-            fontWeight: FontWeight.bold,
-          ),
-          speed: const Duration(milliseconds: 2000),
-        ),
-      ],
-      totalRepeatCount: 4,
-      pause: const Duration(milliseconds: 1000),
-      displayFullTextOnTap: true,
-      stopPauseOnTap: true,
-    ));
+      child: AnimatedTextKit(
+        animatedTexts: [
+          TypewriterAnimatedText('Discipline is the best tool'),
+          TypewriterAnimatedText('Design first, then code'),
+          TypewriterAnimatedText('Do not patch bugs out, rewrite them'),
+          TypewriterAnimatedText('Do not test bugs out, design them out'),
+        ],
+        onTap: () {
+          print("Tap Event");
+        },
+      ),
+    );
   }
 }
