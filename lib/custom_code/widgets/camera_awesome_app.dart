@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 // DO NOT REMOVE OR MODIFY THE CODE ABOVE!
 
 import 'package:camerawesome/camerawesome_plugin.dart';
+import 'package:camerawesome/pigeon.dart';
 import 'package:open_file/open_file.dart'; // Import the open_file package
 
 class CameraAwesomeApp extends StatefulWidget {
