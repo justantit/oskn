@@ -2,6 +2,7 @@ import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'login_model.dart';
@@ -90,7 +91,10 @@ class _LoginWidgetState extends State<LoginWidget> {
                       padding:
                           const EdgeInsetsDirectional.fromSTEB(0.0, 100.0, 0.0, 40.0),
                       child: Text(
-                        'Welcome back',
+                        valueOrDefault<String>(
+                          functions.getdateNow(),
+                          'Fail date now',
+                        ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Readex Pro',
                               color: FlutterFlowTheme.of(context)

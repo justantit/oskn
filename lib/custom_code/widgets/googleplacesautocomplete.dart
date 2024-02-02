@@ -3,6 +3,7 @@ import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'index.dart'; // Imports other custom widgets
+import '/flutter_flow/custom_functions.dart'; // Imports custom functions
 import 'package:flutter/material.dart';
 // Begin custom widget code
 // DO NOT REMOVE OR MODIFY THE CODE ABOVE!
@@ -31,10 +32,11 @@ class _GoogleplacesautocompleteState extends State<Googleplacesautocomplete> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: GooglePlacesAutoCompleteTextFormField(
+        child: Column(children: [
+      GooglePlacesAutoCompleteTextFormField(
         textEditingController: controller,
         googleAPIKey: "AIzaSyBFeB_L5Ak7z-K33rBd44zLiBcp166XhEU",
-        decoration: InputDecoration(
+        inputDecoration: InputDecoration(
           labelStyle: FlutterFlowTheme.of(context).labelMedium.override(
                 fontFamily: 'Readex Pro',
                 color: FlutterFlowTheme.of(context).primaryText,
@@ -83,7 +85,7 @@ class _GoogleplacesautocompleteState extends State<Googleplacesautocomplete> {
           controller.selection = TextSelection.fromPosition(
               TextPosition(offset: prediction.description.toString().length));
         },
-      ),
-    );
+      )
+    ]));
   }
 }

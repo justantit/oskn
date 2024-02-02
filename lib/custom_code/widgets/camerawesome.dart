@@ -8,34 +8,33 @@ import 'package:flutter/material.dart';
 // Begin custom widget code
 // DO NOT REMOVE OR MODIFY THE CODE ABOVE!
 
-import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:camerawesome/camerawesome_plugin.dart';
+import 'package:camerawesome/pigeon.dart';
+import 'package:open_file/open_file.dart';
 
-class AnimationText extends StatefulWidget {
-  const AnimationText({
+class Camerawesome extends StatefulWidget {
+  const Camerawesome({
     super.key,
     this.width,
     this.height,
-    required this.text,
   });
 
   final double? width;
   final double? height;
-  final String text;
 
   @override
-  State<AnimationText> createState() => _AnimationTextState();
+  State<Camerawesome> createState() => _CamerawesomeState();
 }
 
-class _AnimationTextState extends State<AnimationText> {
+class _CamerawesomeState extends State<Camerawesome> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: AnimatedTextKit(
-        animatedTexts: [
-          TypewriterAnimatedText(widget.text),
-        ],
-        onTap: () {
-          print("Tap Event");
+      child: CameraAwesomeBuilder.awesome(
+        saveConfig: SaveConfig.photoAndVideo(),
+        onMediaTap: (mediaCapture) {
+          // OpenFile.open(mediaCapture);
+          print('Tap on value');
         },
       ),
     );
