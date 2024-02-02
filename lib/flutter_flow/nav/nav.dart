@@ -129,6 +129,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'Step6',
           path: '/step6',
           builder: (context, params) => const Step6Widget(),
+        ),
+        FFRoute(
+          name: 'Step1Copy',
+          path: '/step1Copy',
+          builder: (context, params) => const Step1CopyWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
