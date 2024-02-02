@@ -24,6 +24,8 @@ class _Step1CopyWidgetState extends State<Step1CopyWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => Step1CopyModel());
+
+    logFirebaseEvent('screen_view', parameters: {'screen_name': 'Step1Copy'});
   }
 
   @override
@@ -124,6 +126,9 @@ class _Step1CopyWidgetState extends State<Step1CopyWidget> {
                   padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 50.0, 30.0),
                   child: FFButtonWidget(
                     onPressed: () async {
+                      logFirebaseEvent('STEP1_COPY_PAGE_OK_BTN_ON_TAP');
+                      logFirebaseEvent('Button_navigate_to');
+
                       context.pushNamed('Step2');
                     },
                     text: 'OK',

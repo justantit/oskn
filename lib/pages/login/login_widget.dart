@@ -25,6 +25,7 @@ class _LoginWidgetState extends State<LoginWidget> {
     super.initState();
     _model = createModel(context, () => LoginModel());
 
+    logFirebaseEvent('screen_view', parameters: {'screen_name': 'Login'});
     _model.tFEmailController ??= TextEditingController();
     _model.tFEmailFocusNode ??= FocusNode();
 
@@ -246,6 +247,8 @@ class _LoginWidgetState extends State<LoginWidget> {
                           const EdgeInsetsDirectional.fromSTEB(0.0, 100.0, 0.0, 0.0),
                       child: FFButtonWidget(
                         onPressed: () async {
+                          logFirebaseEvent('LOGIN_PAGE_LOG_IN_BTN_ON_TAP');
+                          logFirebaseEvent('Button_auth');
                           GoRouter.of(context).prepareAuthEvent();
 
                           final user = await authManager.signInWithEmail(
@@ -256,6 +259,8 @@ class _LoginWidgetState extends State<LoginWidget> {
                           if (user == null) {
                             return;
                           }
+
+                          logFirebaseEvent('Button_navigate_to');
 
                           context.pushNamedAuth('Step6', context.mounted);
                         },
@@ -294,6 +299,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                         hoverColor: Colors.transparent,
                         highlightColor: Colors.transparent,
                         onTap: () async {
+                          logFirebaseEvent('LOGIN_PAGE_Text_i09qjh16_ON_TAP');
+                          logFirebaseEvent('Text_navigate_to');
+
                           context.pushNamed('Step1');
                         },
                         child: Text(

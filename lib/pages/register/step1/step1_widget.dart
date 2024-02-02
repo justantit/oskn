@@ -22,6 +22,8 @@ class _Step1WidgetState extends State<Step1Widget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => Step1Model());
+
+    logFirebaseEvent('screen_view', parameters: {'screen_name': 'Step1'});
   }
 
   @override
@@ -58,22 +60,12 @@ class _Step1WidgetState extends State<Step1Widget> {
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
-              Flexible(
-                child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      SizedBox(
-                        width: MediaQuery.sizeOf(context).width * 1.0,
-                        height: MediaQuery.sizeOf(context).height * 1.0,
-                        child: custom_widgets.Camerawesome(
-                          width: MediaQuery.sizeOf(context).width * 1.0,
-                          height: MediaQuery.sizeOf(context).height * 1.0,
-                        ),
-                      ),
-                    ],
-                  ),
+              SizedBox(
+                width: MediaQuery.sizeOf(context).width * 1.0,
+                height: MediaQuery.sizeOf(context).height * 1.0,
+                child: custom_widgets.Camerawesome(
+                  width: MediaQuery.sizeOf(context).width * 1.0,
+                  height: MediaQuery.sizeOf(context).height * 1.0,
                 ),
               ),
             ],

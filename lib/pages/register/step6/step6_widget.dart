@@ -23,6 +23,8 @@ class _Step6WidgetState extends State<Step6Widget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => Step6Model());
+
+    logFirebaseEvent('screen_view', parameters: {'screen_name': 'Step6'});
   }
 
   @override
@@ -101,6 +103,8 @@ class _Step6WidgetState extends State<Step6Widget> {
                   padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 20.0, 5.0),
                   child: FFButtonWidget(
                     onPressed: () async {
+                      logFirebaseEvent('STEP6_PAGE_LOGOUT_BTN_ON_TAP');
+                      logFirebaseEvent('Button_auth');
                       GoRouter.of(context).prepareAuthEvent();
                       await authManager.signOut();
                       GoRouter.of(context).clearRedirectLocation();

@@ -38,6 +38,7 @@ class _Step5WidgetState extends State<Step5Widget> {
     super.initState();
     _model = createModel(context, () => Step5Model());
 
+    logFirebaseEvent('screen_view', parameters: {'screen_name': 'Step5'});
     _model.textController1 ??= TextEditingController();
     _model.textFieldFocusNode1 ??= FocusNode();
 
@@ -323,6 +324,8 @@ class _Step5WidgetState extends State<Step5Widget> {
                   padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 20.0, 5.0),
                   child: FFButtonWidget(
                     onPressed: () async {
+                      logFirebaseEvent('STEP5_PAGE_REGISTER_BTN_ON_TAP');
+                      logFirebaseEvent('Button_auth');
                       GoRouter.of(context).prepareAuthEvent();
                       if (widget.password! != widget.password!) {
                         ScaffoldMessenger.of(context).showSnackBar(

@@ -31,6 +31,8 @@ class _Step3WidgetState extends State<Step3Widget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => Step3Model());
+
+    logFirebaseEvent('screen_view', parameters: {'screen_name': 'Step3'});
   }
 
   @override
@@ -320,6 +322,10 @@ class _Step3WidgetState extends State<Step3Widget> {
                               0.0, 5.0, 0.0, 5.0),
                           child: FFButtonWidget(
                             onPressed: () async {
+                              logFirebaseEvent(
+                                  'STEP3_MAINTAIN_A_HEALTHY_SKIN_BTN_ON_TAP');
+                              logFirebaseEvent('Button_navigate_to');
+
                               context.pushNamed(
                                 'Step4',
                                 queryParameters: {

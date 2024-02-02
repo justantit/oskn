@@ -25,6 +25,7 @@ class _Step2WidgetState extends State<Step2Widget> {
     super.initState();
     _model = createModel(context, () => Step2Model());
 
+    logFirebaseEvent('screen_view', parameters: {'screen_name': 'Step2'});
     _model.tFNameController ??= TextEditingController();
     _model.tFNameFocusNode ??= FocusNode();
 
@@ -122,6 +123,9 @@ class _Step2WidgetState extends State<Step2Widget> {
                           hoverColor: Colors.transparent,
                           highlightColor: Colors.transparent,
                           onTap: () async {
+                            logFirebaseEvent(
+                                'STEP2_PAGE_Image_ikzaupmi_ON_TAP');
+                            logFirebaseEvent('Image_upload_media_to_firebase');
                             final selectedMedia =
                                 await selectMediaWithSourceBottomSheet(
                               context: context,
@@ -349,9 +353,12 @@ class _Step2WidgetState extends State<Step2Widget> {
                             0.0, 10.0, 0.0, 20.0),
                         child: FFButtonWidget(
                           onPressed: () async {
+                            logFirebaseEvent('STEP2_PAGE_NEXT_BTN_ON_TAP');
                             if ((_model.tFEmailController.text != '') &&
                                 (_model.tFNameController.text != '') &&
                                 (_model.tFPasswordController.text != '')) {
+                              logFirebaseEvent('Button_navigate_to');
+
                               context.pushNamed(
                                 'Step3',
                                 queryParameters: {
@@ -370,6 +377,7 @@ class _Step2WidgetState extends State<Step2Widget> {
                                 }.withoutNulls,
                               );
                             } else {
+                              logFirebaseEvent('Button_alert_dialog');
                               await showDialog(
                                 context: context,
                                 builder: (alertDialogContext) {
