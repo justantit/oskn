@@ -2,6 +2,7 @@ import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/custom_code/actions/index.dart' as actions;
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -300,6 +301,8 @@ class _LoginWidgetState extends State<LoginWidget> {
                         highlightColor: Colors.transparent,
                         onTap: () async {
                           logFirebaseEvent('LOGIN_PAGE_Text_i09qjh16_ON_TAP');
+                          logFirebaseEvent('Text_custom_action');
+                          await actions.setTrackSegment();
                           logFirebaseEvent('Text_navigate_to');
 
                           context.pushNamed('Step1');
