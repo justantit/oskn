@@ -9,15 +9,16 @@ import 'package:flutter/material.dart';
 // DO NOT REMOVE OR MODIFY THE CODE ABOVE!
 
 import 'package:flutter_segment_sdk/flutter_segment.dart';
-import 'package:flutter_segment_sdk/segment_web.dart';
 
 Future setTrackSegment() async {
   // Add your function code here!
-  SegmentConfig(
-    writeKey: 'ToFIPibaRx5wOwpUa2LRsJ2N3BxY2ul6',
-    trackApplicationLifecycleEvents: false,
-    amplitudeIntegrationEnabled: false,
-    debug: false,
+  Segment.config(
+    options: SegmentConfig(
+      writeKey: FFAppConstants.segmentKeyAndroid,
+      trackApplicationLifecycleEvents: false,
+      amplitudeIntegrationEnabled: false,
+      debug: false,
+    ),
   );
 
   Segment.track(

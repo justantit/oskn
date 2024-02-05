@@ -5,6 +5,7 @@ import '/custom_code/widgets/index.dart' as custom_widgets;
 import '/flutter_flow/random_data_util.dart' as random_data;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:provider/provider.dart';
 import 'step1_copy_model.dart';
 export 'step1_copy_model.dart';
 
@@ -45,6 +46,8 @@ class _Step1CopyWidgetState extends State<Step1CopyWidget> {
         ),
       );
     }
+
+    context.watch<FFAppState>();
 
     return GestureDetector(
       onTap: () => _model.unfocusNode.canRequestFocus
