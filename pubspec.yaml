@@ -33,7 +33,6 @@ dependencies:
   cloud_firestore_platform_interface: 6.0.5
   cloud_firestore_web: 3.8.5
   collection: 1.17.2
-  csv: 5.0.1
   face_camera: ^0.0.9
   file_picker: 6.1.1
   firebase_analytics: 10.7.4
@@ -54,7 +53,6 @@ dependencies:
   flutter_animate: 4.1.1+1
   flutter_cache_manager: 3.3.1
   flutter_plugin_android_lifecycle: 2.0.17
-  flutter_secure_storage: 8.0.0
   flutter_segment_sdk: ^3.13.4
   font_awesome_flutter: 10.6.0
   from_css_color: 2.0.0
@@ -92,7 +90,6 @@ dependencies:
   sign_in_with_apple_web: 1.0.1
   sqflite: 2.2.6
   stream_transform: 2.1.0
-  synchronized: 3.1.0
   timeago: 3.2.2
   url_launcher: 6.1.10
   url_launcher_android: 6.0.27
